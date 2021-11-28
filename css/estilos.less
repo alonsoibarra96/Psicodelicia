@@ -1,0 +1,533 @@
+/*----------------------------------------------------------*/
+/*Variables*/
+/*----------------------------------------------------------*/
+
+/*Colores*/
+@blanco: #fff;
+@lila: #cecdea;
+@azul:#24459F;
+@azul-oscuro: #0a2967;
+@texto-oscuro: #303133;
+@texto-claro: #777;
+@negro-custom: #141618;
+@gris-claro: #eaeaea;
+@magenta: #5e065c;
+@dorado: #b4975a;
+
+/*Fuentes*/
+@fuente-principal: 'Playfair Display', serif;
+@fuente-secundaria: 'Poppins', serif;
+
+/*----------------------------------------------------------*/
+/*Generales*/
+/*----------------------------------------------------------*/
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 16px;
+	font-family: @fuente-principal;
+	color: @texto-oscuro;
+}
+
+img{
+	vertical-align: top;
+	max-width: 100%;
+}
+
+.container{
+	width:90%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+
+/*----------------------------------------------------------*/
+/*Encabezado*/
+/*----------------------------------------------------------*/
+
+header{
+	.menu-bar{
+		width: 100%;
+		background: @blanco;
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		padding: 0 2.25rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 5.875rem;
+		max-height: 6.25rem;
+		border-bottom: 1px soild @magenta;
+
+		.logo{
+			max-width: 5rem;
+		}
+
+		.menu-principal{
+			a{
+				padding: 0 0.5625rem;
+			}
+		}
+
+		.top-redes{
+			a{
+				padding: 0 0.5625rem;
+			}
+		}
+	}
+}
+			
+/*----------------------------------------------------------*/
+/*Main*/
+/*----------------------------------------------------------*/
+
+.main{
+	margin-top: 5.875rem;
+
+	/*Portada*/
+	.portada{
+		width: 100%;
+		height: 18.75rem;
+		background-image: url('../img/ban.jpg');
+		fade: 50%;
+		background-position: center;
+		background-size: cover;
+
+		>.container{
+			background: fade(@magenta, 20%);
+		}
+
+		.llamada-accion{
+			text-align: center;
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: center;
+
+			height: 100%;
+
+			h2{
+				font-size: 2.625rem;
+				color: @texto-claro;
+				width: 100%;
+				padding: 2.8125rem 0;
+				background: fade(@gris-claro, 25%);
+				max-width: 29.375rem;
+				font-family: @fuente-principal;
+			}
+
+			a{
+				font-size: 1.125rem;
+				text-decoration: none;
+				color: @texto-claro;
+				padding: 0.625rem 3.125rem;
+				background: fade(@negro-custom, 60%);
+				margin-top: 2.1875rem;
+				font-family: @fuente-secundaria;
+				transition: all 0.3s ease;
+
+				&:hover{
+					background: fade(@negro-custom, 35%);
+					color: @magenta;
+				}
+			}
+		}
+	} /* Termina Portada*/
+	
+	/*Nosotros*/
+	.nosotros{
+  	padding: 5.625rem 0;
+
+  	.container{
+  		display: flex;
+  		flex-direction: row;
+  		flex-wrap: wrap;
+
+  		.col.izq{
+  			width: 30%;
+  			border-right: 1px solid @gris-claro;
+  			display: flex;
+  			align-items: center;
+  			padding-right: 5%;
+
+  		}
+  		.col.der{
+  			width: 70%;
+  			padding-left: 5%;
+
+  			.texto{
+  				font-size: 1.125rem;
+  				line-height: 1.75;
+  				color: @texto-oscuro;
+  			}
+  			
+  	    }
+     }
+
+  } /*Termina Nosotros*/
+ 
+  /*Podcast*/
+  .podcast{
+  		background: @negro-custom;
+		padding: 5.625rem 0;
+
+		.container{
+			display: flex;
+			flex-direction:row;
+			flex-wrap:wrap;
+			align-items: center;
+
+			.col{
+				width: 50%;
+
+				&.izq{
+					box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.5);
+					overflow: hidden;
+				}
+
+				.titulo-seccion{
+					padding:3.125rem;
+					padding-right: 0;
+
+					h2{
+						color:@blanco;
+
+					}
+					
+
+				}
+
+
+				.slider{
+					width: 600%;
+					display: flex;
+
+					.slide{
+						width: 100%;
+						min-height: 400px;
+						background-size: cover;
+						background-position: center;
+
+						&.foto1{
+							background-image: url('../img/alien.jpg');
+						}
+
+						&.foto2{
+							background-image: url('../img/boca.jpg');
+						}
+
+						&.foto3{
+							background-image: url('../img/brain.jpg');
+						}
+
+						&.foto4{
+							background-image: url('../img/astro.jpg');
+					}
+						&.foto5{
+							background-image: url('../img/hongos.jpg');
+
+						&.foto5{
+							background-image: url('../img/ojo.jpeg');	
+				}
+			  }
+			}
+		}
+	  }
+	}
+  } /*Termina Podcast*/
+
+	/*Subscripcion*/
+.subs{
+
+		.datos{
+			padding: 5.625rem 0 11.875rem 0;
+			position: relative;
+			background-image: url('../img/subs.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			.overlay{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: fade(@negro-custom, 30%);
+				top: 0;
+				z-index: 1;
+			}
+			.container{
+				position: relative;
+				z-index: 2;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+
+				.blurb{
+					background: @blanco;
+					border: 6px double @gris-claro;
+					padding: 2.25rem;
+					text-align: center;
+					width: 25%;
+
+					h3{
+						font-size: 1.5rem;
+						font-weight: 400;
+						line-height: 2.6875rem;
+						margin-bottom: 1.125rem;
+						border-bottom: 1px solid @gris-claro;
+					}
+					p{
+						font-size: 1rem;
+						color: #777;
+					}
+				}
+			}
+		}
+		.formulario{
+			position: relative;
+			z-index: 3;
+			background: @blanco;
+			max-width: 40.625rem;
+			margin: 0 auto;
+			padding: 2.25rem;
+			margin-top: -6.25rem;
+			width: 90%;
+
+			.formulario_sus{
+				.input-group{
+					position: relative;
+					margin-bottom: 2rem;
+
+					input[type="text"],
+					input[type="email"]{
+						font-family: @fuente-secundaria;
+						font-size: 1rem;
+						color: @texto-oscuro;
+						width: 100%;
+						outline: none;
+						padding: 0.9375rem 0;
+						background: none;
+						border: none;
+						border-bottom: 2px solid fade(@dorado, 50%);
+						vertical-align: top;
+
+						&:focus{
+							border-bottom: 2px solid @dorado;
+						}
+
+					}
+					
+					label{
+						color: @texto-claro;
+						font-family: @fuente-secundaria;
+
+						&.label{
+							position: absolute;
+							top: 1rem;
+							left: 0;
+							font-size: 1rem;
+							line-height: 1rem;
+							margin-left: 1rem;
+							transition: all .3s ease;
+
+							&.active{
+								top: -0.75px;
+								margin-left: 0;
+								font-size: -0.75rem;
+								line-height: 0.75rem;
+								color: @texto-claro;
+							}
+						}
+					}
+					.error{
+						position: absolute;
+						color: rgb( 255, 59, 59);
+						font-family: @fuente-secundaria;
+						font-size: 0.875rem;
+					}
+				}
+				input[type="submit"]{
+					font-family: @fuente-secundaria;
+					background: @dorado;
+					color: @blanco;
+					border-radius: 1px;
+					border: 2px solid @blanco;
+					cursor: pointer;
+					display: block;
+					margin: 0 auto;
+					margin-top: 3.125rem;
+					padding: 0.9375rem;
+					width: 20%;
+					outline: none;
+					transition: all ,3s ease;
+
+					&:hover{
+						background: darken(@dorado, 10%);
+					}
+				}
+			}
+		}
+	}			
+
+} /*Termina Main*/
+
+/*----------------------------------------------------------*/
+/*Pie de página*/
+/*----------------------------------------------------------*/
+
+footer{
+	margin-top: 2.25rem;
+	background: @negro-custom;
+	padding: 5.625rem 0;
+	text-align: center;
+	color: @blanco;
+
+	.bottom-redes{
+		margin-top: 2.25rem;
+
+		a{
+			padding: 0 o.5625rem;
+			color: @blanco;
+			transition: all 0.3s ease;
+
+			&:hover{
+				color: @dorado;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------*/
+/*Media Queries*/
+/*----------------------------------------------------------*/
+
+@media all and (max-width: 1500px){
+	.main{
+		.portada{
+			.col{
+				.texto{
+					padding-left: 2.25rem;
+					padding-right: 2.25rem;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 1199px){
+	.main .portada .col .foto{
+		display: none;
+	}
+	.main .portada .col .texto{
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 980px){
+	.main .nosotros .container .col.izq{
+		width: 100%;
+		border-right: none;
+		border-bottom: 1px solid @gris-claro;
+		text-align: center;
+		display: block;
+		padding: 0;
+		margin-bottom: 2.25rem;
+	}
+
+	.main .nosotros .container .col.der{
+		width: 100%;
+		padding-left: 0;
+		text-align: justify;
+	}
+
+	.main .subs .datos .container .blurb{
+		width: 100%;
+		max-width: 40.625rem;
+		margin: 0 auto;
+		margin-bottom: 2.25rem;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media all and (max-width: 800px){
+	header{
+		.menu-bar-pc{
+			display: none;
+		}
+
+		.menu-bar-movil{
+			display: flex;
+		}
+	}
+
+	.main .portada .col{
+		width: 100%;
+
+		.foto-full.izq{
+			display: none;
+		}
+
+		.texto{
+			h2{
+				text-align: center;
+			}
+
+			p{
+				text-align: justify;
+			}
+		}
+	}
+
+	main .podcast .container .col .titulo-seccion a{
+		width: 10px;
+	}
+
+	.main .podcast .container .col{
+		width: 100%;
+	}
+
+	.main .podcast .container .col .titulo-seccion{
+		padding-left: 0;
+		padding-bottom: 0;
+		text-align: center;
+	}
+}
+
+@media all and (max-width: 580px){
+	.titulo-seccion{
+		h2{
+			font-size: 2rem;
+		}
+	}
+
+	.main .nosotros .container .col.der .texto p{
+		font-size: 1rem;
+	}
+
+	.main .podcast .container .col .titulo-seccion a{
+		width: 10px;
+	}
+
+	.main .menu-platos .container .contenedor-menu .contenido .item .col.izq{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 0.625rem;
+	}
+
+	.main .menu-platos .container .contenedor-menu .contenido .item .col.der{
+		width: 100%;
+	}
+
+	.main .contacto .formulario .formulario_sus input[type=submit]{
+		width: 100%;
+	}
+}
